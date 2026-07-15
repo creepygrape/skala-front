@@ -1,11 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>myTrip</title>
-</head>
-<body>
-    <!-- 오디오, 이미지, 비디오>-->
-</body>
+    <style>
+      img,
+      video {
+        max-height: 300px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>🐱‍🐉 나의 여행 앨범</h1>
+    <audio controls loop>
+      <source src="../media2/bunnyhop.mp3" type="audio/mpeg" />
+    </audio>
+    <hr />
+
+    <figure>
+      <img
+        src="../media2/부다페스트_눈사람.jpg"
+        alt="부다페스트 야경 with 미니 눈사람"
+      />
+      <figcaption>아마도 부다페스트의 국회의사당...?</figcaption>
+    </figure>
+    <figure>
+      <img src="../media2/구례.jpg" alt="천음사" />
+      <figcaption>구례 천음사</figcaption>
+    </figure>
+    <hr />
+    <h2>🎬 나의 여행 브이로그</h2>
+    <video autoplay loop>
+      <source src="../media2/trumpet_cat.mp4" type="video/mp4" />
+    </video>
+  </body>
 </html>
