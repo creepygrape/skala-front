@@ -1,159 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Main Page</title>
-    <style>
-        header {
-            background-color: #000000;
-            padding: 20px;
-            text-align: center;
-            color: #ffffff;
-        }
-        nav {
-            background-color: #b8f7ff;
-            overflow: hidden;
-        }
-        .layout-wraper {
-            display: flex;
-        }
-        main {
-            background-color: #f5f5f5;
-            width:75%;
-            min-height: 300px;
-            padding: 5px;
-        }
-        aside {
-            background-color: #fdc3d9;
-            width: 25%;
-            padding: 5px;
-            display: flex;
-            flex-direction: column;
-        }
-        aside video {
-            width: 100%;
-            height: auto;
-        }
-        article {
-            background-color: #13008b;
-            margin-bottom: 20px;
-            padding: 5px;
-            color: #ffffff;
-        }
-        article p {
-            margin: 15px;
-        }
-        section {
-            background-color: #ffc400;
-            margin-bottom: 20px;
-            padding: 5px;
-            display: flex;
-            flex-wrap: wrap;
-            gap: 20px;
-            width: 100%;
-        }
-        section h2 {
-            width: 100%;
-        }
-        section article {
-            flex: 1;
-            min-width: 300px;
-        }
-        .travel-image {
-            width: 100%;
-            height: auto;
-            aspect-ratio: 4 / 3;
-            object-fit: cover; 
-        }
-        .animal-video-container {
-            flex: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <h1>⭐️Main Page⭐️</h1>        
-    </header>
+  </head>
+  <body>
+    <h1>🎃 문희주의 이모저모</h1>
+    <hr />
+    <p>잡다한 이야기를 모아둔 Hub 페이지입니다.</p>
     <nav>
-            <ul>
-                <li><a href="myProfile.html">나의 소개(myProfile)</a></li>
-                <li><a href="signUpPage.html">회원가입(signUpPage)</a></li>
-                <li><a href="myTrip.html">여행 허브(myTrip)</a></li>
-            </ul>
-        </nav>
+      <h3>🎈 바로가기</h3>
+      <ul>
+        <li><a href="myProfile.html">나의 프로필(myProfile)</a></li>
+        <li><a href="myClass.html">나의 수업(myClass)</a></li>
+        <li><a href="myHoliday.html">나의 휴일(myHoliday)</a></li>
+        <li><a href="myTrip.html">나의 여행(myTrip)</a></li>
+        <li><a href="signUpPage.html">회원가입(signUpPage)</a></li>
+      </ul>
+    </nav>
+    <p>
+      <h2>🔥 오늘의 주요 소식</h2>
+      <h3>최근 공지 및 업데이트</h3>
+      <h4>[새로운 소식] 요즘따라 원숭이가 귀엽네요.</h4>
+      <p>이상하게도 자꾸 원숭이에 눈길이 가네요. 귀여움을 느꼈던 사진을 공유하겠습니다.</p>
+      <p>작성일 2026년 07월 15일</p>
+
+      <h4>🙈 이달의 원숭이 사진</h4>
+      <figure>
+        <img src="../media2/숭궈주실래요.png" alt="숭러팅" style="max-width: 200px;">
+        <figcaption>숭며드네요...</figcaption>
+      </figure>
+    </main>
+    <aside>
+      <h4>⏰실시간 정보</h4>
+      <p>현재 위치 : 광주광역시 광산구</p>
+      <p>추천 학습 사이트 : 
+        <a href="https://www.w3schools.com/html/default.asp" target="_blank">
+          w3school 온라인 명세서
+        </a>
+      </p>
+    </aside>
     <hr>
-    <div class="layout-wraper">
-        <!-- 메인 콘텐츠 영역 -->
-         <main>
-            <section id="sec1">
-                <h2>✈️ 기억나는 여행지</h2>
-                <article id="art1">
-                    <h4>🇦🇺 호주</h4>
-                    <figure>
-                        <img class="travel-image" src="../media/jennieRock.jpeg" alt="호주의 링컨스락" width="300">
-                        <figcaption>제니가 가서 유명해진 절벽(무서움)</figcaption>
-                    </figure>
-                    <p>호주의 11월은 초여름이랍니다. 산 위쪽이라 바람도 많이 불고 생각보다 많이 추웠답니다.</p>
-                </article>
-                <article id="art2">
-                    <h4>🇭🇺 헝가리</h4>
-                    <figure>
-                        <img class="travel-image" src="https://digitalchosun.dizzo.com/site/data/img_dir/2023/12/01/2023120180047_3.jpg" alt="헝가리 크리스마스 마켓">
-                        <figcaption>헝가리 크리스마스 마켓</figcaption>
-                    </figure>
-                    <p>헝가리는 크리스마스 마켓은 매우 유명하죠... 하지만 크리스마스 당일에는 닫는답니다.🤪</p>
-                </article>
-            </section>
-            <section id="sec2">
-                <h2>🍪 여행지 추천 음식</h2>
-                <article id="art3">
-                    <figure>
-                        <img class="travel-image" src="https://gomean.co.kr/wp-content/uploads/2023/08/gm-goulash.jpg" alt="헝가리의 굴라쉬">
-                        <figcaption>헝가리 전통 음식 굴라쉬</figcaption>
-                    </figure>
-                    <p>헝가리의 대표적인 요리로, 먹어본 사람들 모두 육개장과 비슷한 맛이라고 말합니다. 추운 겨울에 알맞는 뜨끈한 국물 요리~</p>
-                </article>
-                <article id="art4">
-                    <figure>
-                        <img class="travel-image" src="https://www.news1.kr/_next/image?url=https%3A%2F%2Fi3n.news1.kr%2Fsystem%2Fphotos%2F2022%2F8%2F3%2F5510480%2Fhigh.jpg&w=1920&q=75" alt="호주의 피쉬앤칩스">
-                        <figcaption>호주의 피쉬앤칩스</figcaption>
-                    </figure>
-                    <p>섬나라라 역시 피쉬앤칩스가 맛있네요. 뻔하지만 추천합니다. 이름은 기억안나는데 페리타고 섬 넘어가서 먹으면 꿀맛~</p>
-                </article>
-            </section>
-         </main>
-        <!-- 오른쪽 사이드바 영역-->
-        <aside>
-            <h2 style="margin-bottom: 0.3em;">❤️‍🩹 쉬는 시간</h2>
-            <h3 style="margin-top: 0.3em; margin-bottom: 0.3em;">😺 귀여운 고양이 영상</h3>
-            <p style="margin-top: 0.3em;">고양이 영상은 언제나 옳습니다. 잠시 쉬어가세요~</p>
-            <div class="animal-video-container">
-                <video autoplay>
-                <source src="../media/cat_walk.mp4" type="video/mp4">
-                </video>
-                <video autoplay>
-                    <source src="../media/캥거루.mp4" type="video/mp4">
-                </video> 
-                <video autoplay>
-                    <source src="../media/trumpet_cat.mp4" type="video/mp4">
-                </video>
-            </div>
-  
-            <!-- <audio controls autoplay>
-                <source src="horse.ogg" type="audio/ogg">
-                <source src="horse.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio> -->
-        </aside>
-    </div>
     <footer>
-        <p>email : creepygrape1306@gmail.com</p>
-        <p>github : <a href="https://github.com/creepygrape" target="_blank">https://github.com/creepygrape</a></p>
-        <p>&copy; 2026 HeeJoo Website. All rights reserved.</p>
+      <p>email : creepygrape1306@gmail.com</p>
+      <p>
+        github :
+        <a href="https://github.com/creepygrape" target="_blank">
+          https://github.com/creepygrape
+        </a>
+      </p>
+      <p>&copy; 2026 HeeJoo Website. All rights reserved.</p>
     </footer>
-</body>
+  </body>
 </html>
