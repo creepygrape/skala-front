@@ -64,3 +64,55 @@ th {
   background-color: dimgray;
   color: white;
 }
+input[type="text"],
+input[type="password"],
+input[type="email"],
+input[type="tel"],
+input[type="date"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin: 8px;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  font-family: inherit;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  width: auto;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+fieldset {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  padding: 20px;
+  margin-bottom: 40px;
+}
+legend {
+  font-weight: bold;
+  padding: 0 10px;
+}
+.btn-submit,
+.btn-reset {
+  padding: 10px 25px;
+  font-size: 1.2em;
+  font-weight: bold;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+.btn-submit {
+  background-color: navy;
+}
+.btn-reset {
+  background-color: gray;
+}
