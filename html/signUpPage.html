@@ -4,125 +4,129 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>signUpPage</title>
+    <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <h2>회원가입</h2>
-    <div id="div3">
-      <form action="signUpResult.html" method="get">
-        <fieldset>
-          <legend>계정 정보</legend>
-          <label for="userId">*아이디 :</label>
-          <!-- 정규식으로 아이디 형식 체크 -->
-          <input
-            type="text"
-            id="userId"
-            name="userId"
-            minlength="4"
-            maxlength="20"
-            pattern="^[a-zA-Z0-9]{4,20}$"
-            title="아이디는 최소 4자 이상이여야 하며, 영문 대소문자와 숫자만 입력 가능합니다."
-            required
-            placeholder="4 ~ 20자 영문/숫자"
-          /><br />
-          <label for="userPassword">*비밀번호 :</label>
-          <input
-            type="password"
-            id="userPassword"
-            name="userPassword"
-            minlength="4"
-            maxlength="20"
-            pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,20}$"
-            title="비밀번호는 최소 4자 이상이어야 하며, 영문 대소문자, 숫자를 포함해야 합니다."
-            required
-            placeholder="4 ~ 20자 영문/숫자"
-          /><br />
-          <label for="userEmail">*이메일 :</label>
-          <input
-            type="email"
-            id="userEmail"
-            name="userEmail"
-            required
-            placeholder="example@email.com"
-          /><br />
-        </fieldset>
-        <fieldset>
-          <legend>개인 프로필 정보</legend>
-          <label for="userName">이름 :</label>
-          <input
-            type="text"
-            id="userName"
-            name="userName"
-            minlength="2"
-            maxlength="10"
-            title="이름은 최소 2자, 최대 10자까지 입력할 수 있습니다."
-          /><br />
-          <label for="userPhone">전화번호 :</label>
-          <input
-            type="tel"
-            id="userPhone"
-            name="userPhone"
-            pattern="^\d{3}-\d{3,4}-\d{4}$"
-            title="전화번호는 000-0000-0000 형식으로 입력해야 합니다."
-            placeholder="000-0000-0000"
-          /><br />
-          <label for="userBirth">생년월일 :</label>
-          <input type="date" id="userBirth" name="userBirth" /><br />
-          <p>
-            성별 :
-            <label
-              ><input type="radio" name="gender" value="male" /> 남성</label
-            >
-            <label
-              ><input type="radio" name="gender" value="female" checked />
-              여성</label
-            >
-            <label
-              ><input type="radio" name="gender" value="none" /> 선택안함</label
-            ><br />
-          </p>
-          <p>
-            좋아하는 과일 (중복 선택 가능): <br />
-            <label
-              ><input type="checkbox" name="favoriteFruits" value="apple" />
-              사과</label
-            ><br />
-            <label
-              ><input type="checkbox" name="favoriteFruits" value="banana" />
-              바나나</label
-            ><br />
-            <label
-              ><input type="checkbox" name="favoriteFruits" value="orange" />
-              오렌지</label
-            ><br />
-            <label
-              ><input type="checkbox" name="favoriteFruits" value="grape" />
-              포도</label
-            >
-          </p>
-          <label for="userCountry">거주 국가 :</label>
-          <select name="userCountry" id="userCountry">
-            <option value="">국가 선택</option>
-            <option value="korea">한국</option>
-            <option value="usa">미국</option>
-            <option value="japan">일본</option>
-            <option value="china">중국</option></select
-          ><br /><br />
-        </fieldset>
-        <fieldset>
-          <legend>행운의 편지</legend>
-          <label for="userMessage">자유 메시지 :</label><br />
-          <textarea
-            id="userMessage"
-            name="userMessage"
-            rows="4"
-            cols="50"
-            placeholder="자유롭게 메시지를 작성하세요. (최대 200자)"
-          ></textarea
-          ><br /><br />
-          <input type="submit" value="가입하기" />
-          <input type="reset" value="다시 작성" />
-        </fieldset>
-      </form>
+    <div class="container">
+      <h2>회원가입</h2>
+      <div id="div3">
+        <form action="signUpResult.html" method="get">
+          <fieldset>
+            <legend>계정 정보</legend>
+            <label for="userId">*아이디 :</label>
+            <!-- 정규식으로 아이디 형식 체크 -->
+            <input
+              type="text"
+              id="userId"
+              name="userId"
+              minlength="4"
+              maxlength="20"
+              pattern="^[a-zA-Z0-9]{4,20}$"
+              title="아이디는 최소 4자 이상이여야 하며, 영문 대소문자와 숫자만 입력 가능합니다."
+              required
+              placeholder="4 ~ 20자 영문/숫자"
+            /><br />
+            <label for="userPassword">*비밀번호 :</label>
+            <input
+              type="password"
+              id="userPassword"
+              name="userPassword"
+              minlength="4"
+              maxlength="20"
+              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,20}$"
+              title="비밀번호는 최소 4자 이상이어야 하며, 영문 대소문자, 숫자를 포함해야 합니다."
+              required
+              placeholder="4 ~ 20자 영문/숫자"
+            /><br />
+            <label for="userEmail">*이메일 :</label>
+            <input
+              type="email"
+              id="userEmail"
+              name="userEmail"
+              required
+              placeholder="example@email.com"
+            /><br />
+          </fieldset>
+          <fieldset>
+            <legend>개인 프로필 정보</legend>
+            <label for="userName">이름 :</label>
+            <input
+              type="text"
+              id="userName"
+              name="userName"
+              minlength="2"
+              maxlength="10"
+              title="이름은 최소 2자, 최대 10자까지 입력할 수 있습니다."
+            /><br />
+            <label for="userPhone">전화번호 :</label>
+            <input
+              type="tel"
+              id="userPhone"
+              name="userPhone"
+              pattern="^\d{3}-\d{3,4}-\d{4}$"
+              title="전화번호는 000-0000-0000 형식으로 입력해야 합니다."
+              placeholder="000-0000-0000"
+            /><br />
+            <label for="userBirth">생년월일 :</label>
+            <input type="date" id="userBirth" name="userBirth" /><br />
+            <p>
+              성별 :
+              <label
+                ><input type="radio" name="gender" value="male" /> 남성</label
+              >
+              <label
+                ><input type="radio" name="gender" value="female" checked />
+                여성</label
+              >
+              <label
+                ><input type="radio" name="gender" value="none" />
+                선택안함</label
+              ><br />
+            </p>
+            <p>
+              좋아하는 과일 (중복 선택 가능): <br />
+              <label
+                ><input type="checkbox" name="favoriteFruits" value="apple" />
+                사과</label
+              ><br />
+              <label
+                ><input type="checkbox" name="favoriteFruits" value="banana" />
+                바나나</label
+              ><br />
+              <label
+                ><input type="checkbox" name="favoriteFruits" value="orange" />
+                오렌지</label
+              ><br />
+              <label
+                ><input type="checkbox" name="favoriteFruits" value="grape" />
+                포도</label
+              >
+            </p>
+            <label for="userCountry">거주 국가 :</label>
+            <select name="userCountry" id="userCountry">
+              <option value="">국가 선택</option>
+              <option value="korea">한국</option>
+              <option value="usa">미국</option>
+              <option value="japan">일본</option>
+              <option value="china">중국</option></select
+            ><br /><br />
+          </fieldset>
+          <fieldset>
+            <legend>행운의 편지</legend>
+            <label for="userMessage">자유 메시지 :</label><br />
+            <textarea
+              id="userMessage"
+              name="userMessage"
+              rows="4"
+              cols="50"
+              placeholder="자유롭게 메시지를 작성하세요. (최대 200자)"
+            ></textarea
+            ><br /><br />
+            <input type="submit" value="가입하기" />
+            <input type="reset" value="다시 작성" />
+          </fieldset>
+        </form>
+      </div>
     </div>
   </body>
 </html>
