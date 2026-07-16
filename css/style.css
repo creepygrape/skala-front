@@ -150,3 +150,18 @@ nav ul {
   grid-template-columns: 1fr 1fr 1fr;
   gap: 20px;
 }
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .content-wrapper {
+    flex-direction: column;
+  }
+  main, aside {
+    width: 100%;
+  }
+  .trip-card-grid-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
