@@ -1,47 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>myProfile</title>
-    <style>
-        li {
-            margin: 10px 0;
-        }
-        #div1 {
-            background-color: lightblue;
-            padding: 1px;
-        }
-        #div2 {
-            background-color: rgb(250, 186, 198);
-            padding: 1px;
-        }
-    </style>
-</head>
-<body>
-    <h1>나의 소개 페이지</h1>
-    <h2>자기소개</h2>
-    <div id="div1">
-        <ul style="list-style-type: square;">
-            <li class="li1">이름: 문희주</li>
-            <li class="li1">나이 : 아마도 29... 98년생임다 ^.^</li>
-            <li class="li1">전공 : 소프트웨어공학</li>
-            <li class="li1">취미 : 유튜브, 웹소설</li>
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+    <header>
+    </header>
+    <nav>
+    </nav>
+    <div class="container">
+      <div class="content-wrapper">
+        <aside id="aside-left">
+          <h2>📌 목차</h2>
+            <ul class="topic-list"></ul>
+        </aside>
+    <!-- <h2>목차</h2>
+    <div>
+        <ul style="none">
+            <li><a href="#list-style-type">자기소개</a></li>
+            <li><a href="#good-novel-list">추천 웹소설 목록</a></li>
+            <li><a href="#favorite-fruits">좋아하는 과일</a></li>
+            <li><a href="#footer-area">맨 밑으로 가기</a></li>
+        </ul>
+    </div> -->
+    <main>
+    <h2 id="profile" class="topic" data-title="자기 소개">자기소개</h2>
+    <div class="card">
+      <ul style="list-style-type: square">
+        <li class="li1">이름: 문희주</li>
+        <li class="li1">나이 : 아마도 29... 98년생임다 ^.^</li>
+        <li class="li1">전공 : 소프트웨어공학</li>
+        <li class="li1">취미 : 유튜브, 웹소설</li>
+      </ul>
     </div>
-    <br>
-    <h2>추천 웹소설 목록</h2>
-    <div id="div2">
-            <details>
-                <summary>여기를 클릭하세요 :)</summary>
-                <ol type="I">
-                    <li>연재 - <a href="https://page.kakao.com/content/65171279/" target="_blank">괴담에 떨어져도 출근을 해야 하는구나</a></li>
-                    <li>완결 - <a href="https://page.kakao.com/content/56325530/" target="_blank">데뷔 못하면 죽는 병 걸림</a></li>
-                    <li>완결 - <a href="https://page.kakao.com/content/63443968/" target="_blank">상냥한 아이돌 리더가 되기 위한 조건</a></li>
-                </ol>
-            </details>
+    <h2 id="good-novel-list" class="topic" data-title="추천 웹소설 목록">추천 웹소설 목록</h2>
+    <div class="card">
+        <ol type="I">
+        <li>
+            연재 -
+            <a href="https://page.kakao.com/content/65171279/" target="_blank"
+            >괴담에 떨어져도 출근을 해야 하는구나</a
+            >
+        </li>
+        
+        <li>
+            완결 -
+            <a href="https://page.kakao.com/content/56325530/" target="_blank"
+            >데뷔 못하면 죽는 병 걸림</a
+            >
+        </li>
+        <li>
+            완결 -
+            <a href="https://page.kakao.com/content/63443968/" target="_blank"
+            >상냥한 아이돌 리더가 되기 위한 조건</a
+            >
+        </li>
+        </ol>
+      </ul>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <h2 id="favorite-fruits" class="topic" data-title="좋아하는 과일">좋아하는 과일</h2>
+    <div class="card">
+        <ul>
+            <li>딸기</li>
+            <li>사과</li>
+            <li>복숭아</li>
+            <li>파인애플</li>
         </ul>
     </div>
-    <br>
-    <h3 ><a href="signUp.html">회원가입ㄱㄱ</a></h3>
-</body>
+    </main>
+    <aside id="aside-right"></aside>
+    <!-- <footer id="footer-area">
+        <h1><a href="#my-intro-page">맨 위로 가기</a></h1>
+    </footer> -->
+    </div>
+    <footer></footer>
+
+    <script src="../script/include.js"></script>
+    <script src="../script/topicList.js"></script>
+  </body>
 </html>

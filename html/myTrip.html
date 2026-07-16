@@ -6,42 +6,140 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>myTrip</title>
     <link rel="stylesheet" href="../css/style.css" />
-    <style>
-      img,
-      video {
-        max-height: 300px;
-      }
-    </style>
   </head>
   <body>
+    <header></header>
+    <nav></nav>
     <div class="container">
-      <h1>🐱‍🐉 나의 여행 앨범</h1>
-      <audio controls loop>
-        <source src="../media/bunnyhop.mp3" type="audio/mpeg" />
-      </audio>
-      <hr />
-    <div class="trip-card-grid-wrapper">
-      <p class="trip-card">
-        <img
-          src="../media/부다페스트_눈사람.jpg"
-          alt="부다페스트 야경 with 미니 눈사람"
-        />
-        <br />아마도 부다페스트의 국회의사당...?
-      </p>
-      <p class="trip-card">
-        <img src="../media/구례.jpg" alt="천음사" />
-        <br />구례 천음사
-      </p>
-      <p class="trip-card">
-        <img src="../media/jennieRock.jpeg" alt="링컨스락" />
-        <br />호주 제니바위
-      </p>
-      </div>
-      <hr />
-      <h2>🎬 나의 여행 브이로그</h2>
-      <video autoplay loop controls>
-        <source src="../media/trumpet_cat.mp4" type="video/mp4" />
-      </video>
+      <div class="content-wrapper">
+        <aside id="aside-left">
+          <h2>📌 목차</h2>
+            <ul class="topic-list"></ul>
+        </aside>
+      <main>
+        <h2 id="trip-space" class="topic" data-title="기억나는 여행지">✈ 기억나는 여행지</h2>
+        <section class="card-grid">
+          <article class="card">
+            <figure>
+              <img
+                class="trip-img"
+                src="../media/부다페스트_눈사람.jpg"
+                alt="부다페스트 야경 with 미니 눈사람"
+              />
+              <figcaption>부다페스트 야경</figcaption>
+            </figure>
+            <div class="trip-content">
+              <p>아마도 부다페스트의 국회의사당...?</p>
+            </div>
+          </article>
+          <article class="card">
+            <figure>
+              <img
+                class="trip-img"
+                src="../media/구례.jpg"
+                alt="구례 천은사 전경"
+              />
+              <figcaption>구례 천은사</figcaption>
+            </figure>
+            <div class="trip-content">
+              <p>멧돼지를 조심하세요.</p>
+            </div>
+          </article>
+          <article class="card">
+            <figure>
+              <img
+                class="trip-img"
+                src="../media/jennieRock.jpeg"
+                alt="호주의 링컨스락"
+                width="300"
+              />
+              <figcaption>제니가 가서 유명해진 절벽(무서움)</figcaption>
+            </figure>
+            <div class="trip-content">
+              <p>
+                호주의 11월은 초여름이랍니다. 산 위쪽이라 바람도 많이 불고
+                생각보다 많이 추웠답니다.
+              </p>
+            </div>
+          </article>
+          <article class="card">
+            <figure>
+              <img
+                class="trip-img"
+                src="https://digitalchosun.dizzo.com/site/data/img_dir/2023/12/01/2023120180047_3.jpg"
+                alt="헝가리 크리스마스 마켓"
+              />
+              <figcaption>헝가리 크리스마스 마켓</figcaption>
+            </figure>
+            
+            <div class="trip-content">
+            <p>
+              헝가리는 크리스마스 마켓은 매우 유명하죠... 하지만 크리스마스
+              당일에는 닫는답니다.🤪
+            </p>
+            </div>
+          </article>
+          <article class="card">
+            <figure>
+              <img
+                class="trip-img"
+                src="https://img.magnific.com/premium-photo/landscape-view-haeundae-beach-busan-south-korea_131480-1938.jpg?semt=ais_hybrid&w=740&q=80"
+                alt="해운대"
+              />
+              <figcaption>해운대 with 갈매기</figcaption>
+            </figure>
+            <div class="trip-content">
+              <p>안타깝게도 여름의 해운대를 아직 가보지 못했답니다.</p>
+            </div>
+          </article>
+        </section>
+        <h2 id="trip-food" class="topic" data-title="여행지 추천 음식">🍪 여행지 추천 음식</h2>
+        <section class="card-section">
+          <article class="card">
+            <figure>
+              <img
+                class="trip-img"
+                src="https://gomean.co.kr/wp-content/uploads/2023/08/gm-goulash.jpg"
+                alt="헝가리의 굴라쉬"
+              />
+              <figcaption>헝가리 전통 음식 굴라쉬</figcaption>
+            </figure>
+            <p>
+              헝가리의 대표적인 요리로, 먹어본 사람들 모두 육개장과 비슷한
+              맛이라고 말합니다. 추운 겨울에 알맞는 뜨끈한 국물 요리~
+            </p>
+          </article>
+          <article class="card">
+            <figure>
+              <img
+                class="trip-img"
+                src="https://www.news1.kr/_next/image?url=https%3A%2F%2Fi3n.news1.kr%2Fsystem%2Fphotos%2F2022%2F8%2F3%2F5510480%2Fhigh.jpg&w=1920&q=75"
+                alt="호주의 피쉬앤칩스"
+              />
+              <figcaption>호주의 피쉬앤칩스</figcaption>
+            </figure>
+            <p>
+              섬나라라 역시 피쉬앤칩스가 맛있네요. 뻔하지만 추천합니다. 이름은
+              기억안나는데 페리타고 섬 넘어가서 먹으면 꿀맛~
+            </p>
+          </article>
+          <article class="card">
+            <figure>
+              <img
+                class="trip-img"
+                src="https://png.pngtree.com/thumb_back/fh260/background/20250417/pngtree-classic-cheeseburger-image_17208347.jpg"
+                alt="햄버거"
+              />
+              <figcaption>햄버거</figcaption>
+            </figure>
+            <p>간단하게 먹기에는 햄버거가 짱. 각 나라의 맥도날드 방문 기원🙏</p>
+          </article>
+        </section>
+      </main>
+      <aside id="aside-right"></aside>
     </div>
+    <footer></footer>
+    <script src="../script/include.js"></script>
+    <script src="../script/topicList.js"></script>
   </body>
 </html>

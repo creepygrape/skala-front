@@ -7,13 +7,23 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
+    <header></header>
+    <nav></nav>
     <div class="container">
-      <h2>회원가입</h2>
+    <div class="content-wrapper">
+      <aside id="aside-left">
+        <h2>📌 목차</h2>
+        <ul class="topic-list"></ul>
+      </aside>
+      <main>
+      <h2>정보 입력</h2>
       <div id="div3">
         <form action="signUpResult.html" method="get">
           <fieldset>
             <legend>계정 정보</legend>
-            <label for="userId">*아이디 :</label>
+            <label for="userId" id="userId-label" class="topic" data-title="아이디"
+              >*아이디 :</label
+            >
             <!-- 정규식으로 아이디 형식 체크 -->
             <input
               type="text"
@@ -26,7 +36,7 @@
               required
               placeholder="4 ~ 20자 영문/숫자"
             /><br />
-            <label for="userPassword">*비밀번호 :</label>
+            <label for="userPassword" id="userPassword-label" class="topic" data-title="비밀번호">*비밀번호 :</label>
             <input
               type="password"
               id="userPassword"
@@ -38,7 +48,7 @@
               required
               placeholder="4 ~ 20자 영문/숫자"
             /><br />
-            <label for="userEmail">*이메일 :</label>
+            <label for="userEmail" id="userEmail-label" class="topic" data-title="이메일">*이메일 :</label>
             <input
               type="email"
               id="userEmail"
@@ -49,7 +59,7 @@
           </fieldset>
           <fieldset>
             <legend>개인 프로필 정보</legend>
-            <label for="userName">이름 :</label>
+            <label for="userName" id="userName-label" class="topic" data-title="이름">이름 :</label>
             <input
               type="text"
               id="userName"
@@ -58,7 +68,7 @@
               maxlength="10"
               title="이름은 최소 2자, 최대 10자까지 입력할 수 있습니다."
             /><br />
-            <label for="userPhone">전화번호 :</label>
+            <label for="userPhone" id="userPhone-label" class="topic" data-title="전화번호">전화번호 :</label>
             <input
               type="tel"
               id="userPhone"
@@ -67,9 +77,9 @@
               title="전화번호는 000-0000-0000 형식으로 입력해야 합니다."
               placeholder="000-0000-0000"
             /><br />
-            <label for="userBirth">생년월일 :</label>
+            <label for="userBirth" id="userBirth-label" class="topic" data-title="생년월일">생년월일 :</label>
             <input type="date" id="userBirth" name="userBirth" /><br />
-            <p>
+            <p id="gender" class="topic" data-title="성별">
               성별 :
               <label
                 ><input type="radio" name="gender" value="male" /> 남성</label
@@ -83,7 +93,7 @@
                 선택안함</label
               ><br />
             </p>
-            <p>
+            <p id="favoriteFruits" class="topic" data-title="좋아하는 과일">
               좋아하는 과일 (중복 선택 가능): <br />
               <label
                 ><input type="checkbox" name="favoriteFruits" value="apple" />
@@ -102,7 +112,7 @@
                 포도</label
               >
             </p>
-            <label for="userCountry">거주 국가 :</label>
+            <label for="userCountry" id="userCountry-label" class="topic" data-title="거주 국가">거주 국가 :</label>
             <select name="userCountry" id="userCountry">
               <option value="">국가 선택</option>
               <option value="korea">한국</option>
@@ -113,7 +123,7 @@
           </fieldset>
           <fieldset>
             <legend>행운의 편지</legend>
-            <label for="userMessage">자유 메시지 :</label><br />
+            <label for="userMessage" id="userMessage-label" class="topic" data-title="자유 메시지">자유 메시지 :</label><br />
             <textarea
               id="userMessage"
               name="userMessage"
@@ -127,6 +137,11 @@
           <input type="reset" class="btn-reset" value="다시 작성" />
         </form>
       </div>
+      </main>
+      <aside id="aside-right"></aside>
     </div>
+    <footer></footer>
+    <script src="../script/include.js"></script>
+    <script src="../script/topicList.js"></script>
   </body>
 </html>
