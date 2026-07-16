@@ -8,6 +8,7 @@
   </head>
   <body>
     <div class="container">
+      <header>
     <h1>🎃 문희주의 이모저모</h1>
     <hr />
     <p>잡다한 이야기를 모아둔 Hub 페이지입니다.</p>
@@ -21,6 +22,7 @@
         <li><a href="signUp.html">회원가입(signUp)</a></li>
       </ul>
     </nav>
+    </header>
     <div class="content-wrapper">
     <main>
       <h2>🔥 오늘의 주요 소식</h2>
@@ -36,13 +38,19 @@
       </figure>
     </main>
     <aside>
-      <h2>⏰실시간 정보</h4>
+      <h2>💣 잡동사니</h4>
       <p>현재 위치 : 광주광역시 광산구</p>
       <p>추천 학습 사이트 : 
         <a href="https://www.w3schools.com/html/default.asp" target="_blank">
           w3school 온라인 명세서
         </a>
       </p>
+      <section name="game-area">
+        <h3>노잼 게임장</h3>
+        <button id="guess-num-game" class="btn-submit" onclick="upDown()">숫자 맞추기</button>
+        <button id="compute-grade" class="btn-submit" onclick="grade()">성적 계산기</button>
+        <button id="show-me-the-bag" class="btn-submit" onclick="showMeTheBag()">내 가방 보기</button>
+      </section>
     </aside>
     </div>
     <hr>
@@ -57,5 +65,8 @@
       <p>&copy; 2026 HeeJoo Website. All rights reserved.</p>
     </footer>
   </div>
+  <script src="../script/upDown.js"></script>
+  <script src="../script/grade.js"></script>
+  <script src="../script/bag.js"></script>
   </body>
 </html>
