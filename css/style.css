@@ -30,9 +30,17 @@ h3 {
 h4 {
   font-weight: bold;
 }
+hr {
+  border: 0;               
+  height: 1px;            
+  background-color: navy; 
+}
 a {
   color: crimson;
-  text-decoration: overline;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
 }
 mark {
   background-color: lightsalmon;
@@ -49,9 +57,10 @@ mark {
   margin: 30px 0;
 }
 .trip-card img {
-  max-width: 100%;
+  width: 100%;
   height: auto;
-  margin-bottom: 15px;
+  margin-bottom: 50px;
+  object-fit: cover;
 }
 table {
   width: 90%;
@@ -120,4 +129,20 @@ legend {
 }
 .btn-reset {
   background-color: gray;
+}
+nav ul {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  gap: 50px;
+}
+.content-wrapper {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+}
+.trip-card-grid-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
 }
