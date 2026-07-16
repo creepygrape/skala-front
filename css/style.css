@@ -27,6 +27,9 @@ h3 {
   border: 0.2em;
   border-style: dashed;
 }
+h4 {
+  font-weight: bold;
+}
 a {
   color: crimson;
   text-decoration: overline;
