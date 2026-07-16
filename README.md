@@ -1,86 +1,31 @@
 # 💻 skala-front
 
-> **skala-front** 웹 프로그래밍 기초 및 CSS 실습 프로젝트 기록입니다.
+> **skala-front** 2026-07-15 ~ 2026-07-16에 진행한 HTML · CSS · JavaScript 실습 가이드 결과물입니다.
 
 ---
 
 ## 📌 목차 (바로가기)
-1. [Project 구성과 index.html 생성](#1-project-구성과-indexhtml-생성)
-2. [나의 휴일 일과](#2-나의-휴일-일과)
-3. [나의 소개](#3-나의-소개)
-4. [나의 강의 일정](#4-나의-강의-일정)
-5. [바로가기](#5-바로가기)
-6. [회원가입](#6-회원가입)
-7. [회원가입결과](#7-회원가입결과)
-8. [나의 여행지](#8-나의-여행지)
-9. [포털 사이트형 메인 Hub 만들기](#9-포털-사이트형-메인-hub-만들기)
-10. [미션 1: 전체 테마 및 텍스트 Styling](#10-미션-1-전체-테마-및-텍스트-styling)
-11. [미션 2: 박스 모델의 이해](#11-미션-2-박스-모델의-이해)
-12. [미션 3: 가독성 높은 회원가입 폼](#12-미션-3-가독성-높은-회원가입-폼)
+
+Day1 실습
+
+1. [Web Workflow](#1-web-workflow)
+2. [나의 소개 페이지](#2-my-intro-page)
+3. [바로가기](#3-shortcut-links)
+4. [회원가입 Form](#4-signup-Form)
+5. [여행지 Hub](#5-trip-hub)
+
+Day2-1 실습 6. [CSS 스타일링](#6-css-styling) 7. [JavaScript 기초](#7-js-basic-programming)
+
+Day2-2 실습 8. [DOM / Event](#8-dom-event-practice) 9. [Async/Module](#9-dom-async-modules) 10. [Wrap-up Quiz](#10-wrapup-quiz)
+
+Day1 종합실습 11. [회원가입 & 결과 페이지](#11-signup-and-signupresult) 12. [여행지 소개 페이지](#12-trip-info)
+
+Day2 종합실습 13. [반응형 상품 카드 갤러리](#13-responsive-item-card-gallery) 14. [인터랙티브 할 일 관리 앱](#14-interactive-schedule-app)
 
 ---
 
-### 1. Project 구성과 index.html 생성
-<p align="left">
-  <img src="exec/img/0001.jpg" width="700px" alt="Project 구성 및 index.html">
-</p>
+### 1. Web Workflow
 
-### 2. 나의 휴일 일과
 <p align="left">
-  <img src="exec/img/0016.jpg" width="700px" alt="나의 휴일 일과 화면">
+  <img src="exec/img/0001.jpg" width="700px" alt="Web Workflow">
 </p>
-
-### 3. 나의 소개
-<p align="left">
-  <img src="exec/img/0002.jpg" width="700px" alt="나의 소개 화면">
-</p>
-
-### 4. 나의 강의 일정
-<p align="left">
-  <img src="exec/img/0003.jpg" width="700px" alt="나의 강의 일정 표">
-</p>
-
-### 5. 바로가기
-<p align="left">
-  <img src="exec/img/0004.jpg" width="700px" alt="바로가기 링크 화면">
-</p>
-
-### 6. 회원가입
-<p align="left">
-  <img src="exec/img/0005.jpg" width="700px" alt="회원가입 폼">
-</p>
-
-### 7. 회원가입결과
-<p align="left">
-  <img src="exec/img/0006.jpg" width="700px" alt="회원가입 결과 화면">
-</p>
-
-### 8. 나의 여행지
-<p align="left">
-  <img src="exec/img/0007.jpg" width="700px" alt="나의 여행지 화면 1">
-  <img src="exec/img/0008.jpg" width="700px" alt="나의 여행지 화면 2">
-</p>
-
-### 9. 포털 사이트형 메인 Hub 만들기
-<p align="left">
-  <img src="exec/img/0009.jpg" width="700px" alt="메인 Hub 화면 1">
-  <img src="exec/img/0010.jpg" width="700px" alt="메인 Hub 화면 2">
-</p>
-
-### 10. 미션 1: 전체 테마 및 텍스트 Styling
-<p align="left">
-  <img src="exec/img/0011.jpg" width="700px" alt="미션 1 결과 화면">
-</p>
-
-### 11. 미션 2: 박스 모델의 이해
-<p align="left">
-  <img src="exec/img/0012.jpg" width="700px" alt="미션 2 결과 화면 1">
-  <img src="exec/img/0013.jpg" width="700px" alt="미션 2 결과 화면 2">
-</p>
-
-### 12. 미션 3: 가독성 높은 회원가입 폼
-<p align="left">
-  <img src="exec/img/0014.jpg" width="700px" alt="미션 3 결과 화면 1">
-  <img src="exec/img/0015.jpg" width="700px" alt="미션 3 결과 화면 2">
-</p>
-
