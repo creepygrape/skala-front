@@ -128,8 +128,10 @@ legend {
   border: none;
   border-radius: 4px;
   margin-right: 5px;
+  margin-top: 5px;
   cursor: pointer;
   transition: background-color 3s;
+  min-width: 50px;
 }
 .btn-submit {
   background-color: navy;
@@ -153,8 +155,11 @@ nav ul {
   align-items: flex-start;
   width: 100%;
 }
-.content-wrapper > * {
-  flex: 1;
+main {
+  flex: 7;
+}
+aside {
+  flex: 3;
 }
 .trip-card-grid-wrapper {
   display: grid;
@@ -175,6 +180,20 @@ nav ul {
   .trip-card-grid-wrapper {
     grid-template-columns: 1fr;
   }
+}
+#section-weather {
+  width: 100%;
+}
+#weather-box {
+  border: 1px dotted skyblue;
+  height: 250px;
+}
+#weather-box h4 {
+  font-weight: bold;
+  padding: 30px;
+}
+#weather-box p {
+  padding-top: 20px;
 }
 
 @keyframes fadeIn {
