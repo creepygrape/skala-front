@@ -1,24 +1,38 @@
-@import url("https://fonts.googleapis.com/css2?family=Diphylleia&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cute+Font&family=Diphylleia&family=Do+Hyeon&family=Dongle&display=swap");
+
+:root {
+  /* 배경 및 기본 레이아웃 */
+  --bg-color: #ffffff;
+  --card-bg-color: #f8fef2; /* 희미한 연두 (기본 카드 배경) */
+  --border-bg-gray: #f2f2f2; /* 희미한 회색 */
+  --border-card-color: #f7f9ec; /* 기본 카드 테두리 */
+
+  /* 텍스트 컬러 */
+  --text-main: #000000;
+  --text-sub: #333333; /* 가독성이 훌륭한 차콜 브라운/먹색 */
+  --text-gray: #a0aec0;
+
+  /* 포인트 테마 컬러 */
+  --primary-tomato: #f25e5e; /* 잘 익은 토마토 코랄 (버튼 & 포인트) */
+  --light-tomato: #ffa3a3; /* 연한 토마토 핑크 */
+  --point-green: #b4d97e; /* 새싹 연두색 (호버 및 서브 포인트) */
+}
 
 body {
-  font-family: "Diphylleia", serif;
-  font-weight: 400;
-  font-style: normal;
-  line-height: 1.5;
-  color: rgb(6, 0, 97);
-  /* background-color: lightsteelblue; */
+  background-color: var(--bg-color);
+  color: var(--text-main);
+  font-family: "Diphylleia", sans-serif;
+  padding: 60px 20px 0 40px;
 }
 h1 {
-  color: orangered;
-  font-size: 2em;
-  padding-top: 0.3em;
   border: 0.2em;
+  margin-bottom: 0;
 }
 h2 {
-  background-color: rgb(204, 241, 255);
+  background-color: var(--light-tomato);
   padding-bottom: 0.3em;
   border: 0px;
-  border-left: 8px solid navy;
+  border-left: 8px solid var(--primary-tomato);
   padding-left: 10px;
 }
 h3 {
@@ -31,9 +45,9 @@ h4 {
   font-weight: bold;
 }
 hr {
-  border: 0;               
-  height: 1px;            
-  background-color: navy; 
+  border: 0;
+  height: 1px;
+  background-color: navy;
 }
 a {
   color: crimson;
@@ -46,9 +60,24 @@ a:hover {
 mark {
   background-color: lightsalmon;
 }
+/* 중앙 집중형 레이아웃 */
 .container {
-  margin: 0 auto;
-  padding: 15px;
+  /* 1. 콘텐츠 영역의 최대 가로 너비를 제한합니다. (보통 1000px ~ 1200px 사이) */
+  max-width: 1400px;
+
+  /* 2. 화면이 1200px보다 작아질 때는 좌우 꽉 차게 조절합니다. */
+  width: 100%;
+
+  /* 3. 🔥 핵심: 위아래 여백은 0, 좌우 여백은 auto로 주어 화면 중앙에 정렬시킵니다. */
+  margin-left: auto;
+  margin-right: auto;
+
+  /* 4. 모바일 화면처럼 좁아졌을 때 글씨가 화면 가장자리에 딱 붙지 않도록 안쪽 여백을 줍니다. */
+  padding-left: 20px;
+  padding-right: 20px;
+
+  /* 5. padding이 너비 계산에 영향을 주지 않도록 설정 */
+  box-sizing: border-box;
 }
 .trip-card {
   background-color: rgba(169, 196, 212, 0.699);
@@ -58,10 +87,9 @@ mark {
   margin: 30px 0;
   transition: transform 1s, box-shadow 1s;
 }
-.trip-card img {
+.card img {
   width: 100%;
-  height: 100%;
-  margin-bottom: 50px;
+  margin-bot00tom: 50px;
   object-fit: cover;
 }
 .trip-card:hover {
@@ -143,11 +171,28 @@ legend {
 .btn-reset:hover {
   background-color: hotpink;
 }
+nav {
+  background-color: var(--point-green);
+  padding: 5px 0 5px 50px;
+  width: 100%;
+
+  /* 항상 화면 상단 고정 */
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  box-sizing: border-box;
+}
 nav ul {
   display: flex;
   list-style: none;
   padding: 0;
   gap: 50px;
+}
+nav > ul > li > a {
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.3em;
 }
 .content-wrapper {
   display: flex;
@@ -156,37 +201,48 @@ nav ul {
   width: 100%;
 }
 main {
-  flex: 7;
+  flex: 1;
 }
 aside {
-  flex: 3;
+  flex: 0 0 180px;
+  width: 180px;
+
+  /* 목차 따라가기 */
+  position: sticky;
+  top: 69px;
 }
-.trip-card-grid-wrapper {
+
+#aside-left ul {
+  list-style-type: "🍅 ";
+  padding-left: 25px;
+  margin-left: 20px;
+}
+#aside-left ul li {
+  padding-bottom: 30px;
+}
+.card-section {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-@media (max-width: 768px) {
-  nav ul {
-    flex-direction: column;
-    gap: 10px;
-  }
-  .content-wrapper {
-    flex-direction: column;
-  }
-  main, aside {
-    width: 100%;
-  }
-  .trip-card-grid-wrapper {
-    grid-template-columns: 1fr;
-  }
+.topic {
+  scroll-margin-top: 90px;
 }
+
 #section-weather {
   width: 100%;
 }
 #weather-box {
   border: 1px dotted skyblue;
   height: 250px;
+  max-height: 100%;
+}
+
+#weather-box h4, p {
+  max-width: 100%;            /* 부모인 weather-box 너비를 절대 넘지 못하게 설정 */
+  max-height: 100%;
+  margin: 8px 0;              
+  box-sizing: border-box;     
 }
 #weather-box h4 {
   font-weight: bold;
@@ -206,4 +262,126 @@ aside {
 }
 header h1 {
   animation: fadeIn 3s ease-out forwards;
+}
+.card {
+  background-color: var(--card-bg-color);
+  border: 1px solid var(--point-green);
+  padding: 24px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+    0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  border-radius: 8px;
+
+  /* 작성일을 우측 하단에 고정하기 위한 flex 설정 */
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* 1. 카드 제목 (첫 번째 h4) */
+.card > h4:first-of-type {
+  font-size: 1.25em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+/* 2. 본문 (p) */
+.card > p:not(.created-date) {
+  color: var(--text-sub)
+  line-height: 1.5;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+
+/* 3. 콘텐츠 타이틀 (두 번째 h4) */
+.card > h4:nth-of-type(2) {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-sub);
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+/* 4. 미디어/콘텐츠 영역 (figure) */
+.card figure {
+  margin: 0; /* 아래 작성일과 겹치지 않도록 하단 여백(40px) 확보 */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start; /* 미디어를 왼쪽 정렬 (가운데 정렬 원하면 center) */
+  gap: 8px;
+}
+
+/* 이미지 및 오디오 스타일링 */
+.card .card-img {
+  width: 100%;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.card audio {
+  width: 100%;
+  max-width: 300px;
+}
+
+/* 캡션 스타일 */
+.card figcaption {
+  font-size: 0.85rem;
+  color: var(--text-gray);
+  font-style: italic;
+}
+
+/* 5. 작성일 (우측 하단 배치) */
+.card .created-date {
+  position: absolute;
+  bottom: 16px;
+  right: 20px;
+  font-size: 0.8rem;
+  color: var(--text-gray);
+  margin: 0;
+}
+
+.video-container video{
+  width: 100%;
+}
+
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px 20px;
+  margin-bottom: 40px;
+}
+.trip-img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+}
+
+@media (max-width: 768px) {
+  nav ul {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #aside-left {
+    position: static;
+    margin-top: 120px;
+  }
+  .signup-result-top {
+    margin-top: 140px;
+  }
+  .content-wrapper {
+    flex-direction: column;
+  }
+  main,
+  aside {
+    width: 100%;
+  }
+  .trip-card-grid-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .topic {
+    scroll-margin-top: 300px;
+  }
 }
