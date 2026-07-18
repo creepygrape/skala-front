@@ -27,7 +27,7 @@ function render() {
         }>
         <span class="${todo.completed ? "completed" : ""}">${todo.text}</span>
       </label>
-      <button class="delete-btn">✕</button>
+      <button class="delete-btn red">✕</button>
     </li>
   `
     )

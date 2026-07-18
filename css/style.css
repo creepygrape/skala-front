@@ -645,7 +645,6 @@ p.hero-subtitle.animate-fade-in {
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   padding: 30px 20px;
 }
 
@@ -682,6 +681,25 @@ p.hero-subtitle.animate-fade-in {
 .completed {
   text-decoration: line-through; /* 👈 취소선 그어주기 */
   color: var(--text-gray);   /* 글자색을 흐리게 변경 */
+}
+
+.todo-item {
+  display: flex;
+  margin-bottom: 10px;
+}
+
+.delete-btn {
+  width: 25px;
+  height: 25px;
+  border: none;
+  border-radius: 8px;
+  margin-left: auto;
+  color: var(--text-white);
+  transition: background-color 0.5s;
+}
+
+.delete-btn:hover{
+  background-color: var(--text-main);
 }
 
 /* 2. 사용자가 화면에서 체크박스를 누르는 순간 즉시 실시간 반영 (UX 향상) */
