@@ -6,16 +6,42 @@
   --card-bg-color: #f8fef2; /* 희미한 연두 (기본 카드 배경) */
   --border-bg-gray: #f2f2f2; /* 희미한 회색 */
   --border-card-color: #f7f9ec; /* 기본 카드 테두리 */
+  --border-yellow: #f0d800;
 
   /* 텍스트 컬러 */
   --text-main: #000000;
   --text-sub: #333333; /* 가독성이 훌륭한 차콜 브라운/먹색 */
-  --text-gray: #a0aec0;
+  --text-gray: #8d8d8d;
+  --text-white: #ffffff;
 
   /* 포인트 테마 컬러 */
   --primary-tomato: #f25e5e; /* 잘 익은 토마토 코랄 (버튼 & 포인트) */
   --light-tomato: #ffa3a3; /* 연한 토마토 핑크 */
   --point-green: #b4d97e; /* 새싹 연두색 (호버 및 서브 포인트) */
+  --point-yellow: #fff9db;
+}
+
+body.dark-mode {
+  /* 배경 및 기본 레이아웃 */
+  --bg-color: #161616;         
+  --card-bg-color: #351717;    
+  --border-bg-gray: #2a1d1d;  
+  --border-card-color: #362424;  
+  --border-yellow: #131f13;
+
+  --text-main: #f0f4ec;         
+  --text-sub: #cbd5e1;          
+  --text-gray: #718096;         
+  --text-white: #ffffff;
+
+  --primary-tomato: #7c0000;    
+  --light-tomato: #492121;     
+  --point-green: #440000;   
+  --point-yellow: #244424;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -24,6 +50,69 @@ body {
   font-family: "Diphylleia", sans-serif;
   padding: 60px 20px 0 40px;
 }
+
+footer {
+  width: 100%;
+  background-color: var(--border-bg-gray);
+  padding: 20px 0;
+  margin-top: 20px;
+}
+
+.footer-container {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+
+  box-sizing: border-box;
+}
+
+.footer-left {
+  display: flex;
+  flex-direction: column;  
+  gap: 6px;                    
+}
+
+.footer-left p {
+  margin: 0;                   
+  font-size: 0.9rem;
+  color: #495057;
+}
+
+.footer-left a {
+  color: var(--primary-tomato);
+  text-decoration: none;
+}
+.footer-left a:hover {
+  text-decoration: underline;
+}
+
+.scroll-to-top-footer {
+  color: var(--text-sub);
+  text-decoration: none;
+  font-size: 0.9rem;
+  font-weight: 600;
+  padding: 8px 16px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  background-color: var(--card-bg-color)
+  white-space: nowrap;  
+  
+  transition: background-color 0.2s, color 0.2s, translate 0.2s;
+  will-change: translate;
+}
+
+.scroll-to-top-footer:hover {
+  background-color: #343a40;
+  color: #ffffff;
+  border-color: #343a40;
+  translate: 0 -3px;  
+}
+
+
 h1 {
   border: 0.2em;
   margin-bottom: 0;
@@ -36,10 +125,10 @@ h2 {
   padding-left: 10px;
 }
 h3 {
-  color: blueviolet;
-  padding: 0.3em;
-  border: 0.2em;
-  border-style: dashed;
+  color: var(--point-green);
+  border-bottom: 2px solid;
+  padding-bottom: 5px;
+  margin-bottom: 0;
 }
 h4 {
   font-weight: bold;
@@ -47,12 +136,12 @@ h4 {
 hr {
   border: 0;
   height: 1px;
-  background-color: navy;
+  background-color: var(--point-green);
 }
 a {
   color: crimson;
   text-decoration: none;
-  transition: color 3s;
+  transition: color 0.5s;
 }
 a:hover {
   color: black;
@@ -158,42 +247,69 @@ legend {
   margin-right: 5px;
   margin-top: 5px;
   cursor: pointer;
-  transition: background-color 3s;
+  transition: background-color 0.5s;
   min-width: 50px;
 }
 .btn-submit {
-  background-color: navy;
+  background-color: var(--primary-tomato);
 }
 .btn-reset {
-  background-color: gray;
+  background-color: var(--text-sub);
 }
 .btn-submit:hover,
 .btn-reset:hover {
-  background-color: hotpink;
-}
-nav {
   background-color: var(--point-green);
-  padding: 5px 0 5px 50px;
-  width: 100%;
+}
 
-  /* 항상 화면 상단 고정 */
+header {
+  width: 100%;
   position: fixed;
   top: 0;
   left: 0;
   z-index: 1000;
   box-sizing: border-box;
+
+  background-color: var(--point-green);
+  padding: 5px 0 5px 50px;
+  width: 100%;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
-nav ul {
+
+header ul {
   display: flex;
   list-style: none;
   padding: 0;
   gap: 50px;
 }
-nav > ul > li > a {
+header a {
   color: #ffffff;
   font-weight: bold;
   font-size: 1.3em;
 }
+
+.dark-mode-btn {
+  margin: auto 20px auto auto;
+  background: none;
+  border: 1px solid var(--bg-color);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  transition: background-color 0.2s, scale 0.2s;
+}
+
+.dark-mode-btn:hover {
+  scale: 1.2;
+  background-color: var(--border-bg-gray);
+}
+
 .content-wrapper {
   display: flex;
   gap: 30px;
@@ -206,7 +322,9 @@ main {
 aside {
   flex: 0 0 180px;
   width: 180px;
+}
 
+#aside-left, #aside-right {
   /* 목차 따라가기 */
   position: sticky;
   top: 69px;
@@ -225,7 +343,8 @@ aside {
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
 }
-.topic {
+
+.topic, input {
   scroll-margin-top: 90px;
 }
 
@@ -233,33 +352,27 @@ aside {
   width: 100%;
 }
 #weather-box {
-  border: 1px dotted skyblue;
-  height: 250px;
-  max-height: 100%;
+  background-color: var(--card-bg-color);
+  border-left: 8px solid var(--point-green);
+  box-sizing: border-box;
+
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
-#weather-box h4, p {
-  max-width: 100%;            /* 부모인 weather-box 너비를 절대 넘지 못하게 설정 */
-  max-height: 100%;
-  margin: 8px 0;              
-  box-sizing: border-box;     
+#weather-box p {
+  padding-left: 20px;
 }
 #weather-box h4 {
   font-weight: bold;
-  padding: 30px;
+  padding: 0 20px;
+
+  margin: 0 5px 10px 5px;
 }
 #weather-box p {
-  padding-top: 20px;
 }
 
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
 header h1 {
   animation: fadeIn 3s ease-out forwards;
 }
@@ -313,7 +426,7 @@ header h1 {
 }
 
 /* 이미지 및 오디오 스타일링 */
-.card .card-img {
+.card .card-img .card-video{
   width: 100%;
   border-radius: 8px;
   object-fit: cover;
@@ -351,7 +464,7 @@ header h1 {
   gap: 24px 20px;
   margin-bottom: 40px;
 }
-.trip-img {
+.trip-img, .trip-video{
   width: 100%;
   height: 200px;
   object-fit: cover;
@@ -359,17 +472,246 @@ header h1 {
   border-radius: 8px;
 }
 
-@media (max-width: 768px) {
-  nav ul {
+
+.trip {
+  transition: transform 0.5s, box-shadow 0.5s, translate 0.5s;
+}
+.trip:hover {
+  transform: translateY(-10px) scale(1.04);
+  box-shadow: 0 12px 20px gray;
+}
+.trip .trip-img{
+  transition: transform 0.5s;
+}
+.trip:hover .trip-img {
+  transform: scale(1.12);
+}
+
+.trip figcaption, p {
+  transition: translate 0.5s
+}
+
+.trip:hover figcaption,
+.trip:hover p{
+  translate: 0 20px;
+}
+
+table{
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: var(--card-bg-color);
+}
+table th, td {
+  border: 1px solid white;
+  padding: 12px;
+}
+table th{
+  background-color: var(--point-green);
+  width: 20%;
+  font-weight: bold;
+}
+
+table td {
+  text-align: left;
+  padding-left: 30px;
+}
+.food-container-wrapper {
+  display: flex;
+  gap: 25px;            
+  align-items: flex-start;
+  width: 100%;
+}
+
+#trip-food-section {
+  flex: 72;                   
+
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.food-sidebar {
+  flex: 28;                   
+  background-color: var(--point-yellow); 
+  padding: 20px;
+  border-radius: 8px;
+  border: 1px solid var(--border-yellow);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+  box-sizing: border-box;
+}
+.food-sidebar li{
+  margin-bottom: 20px;
+  color: var(--text-sub);
+}
+
+#trip-video-section {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.hero-section {
+  position: relative;
+  width: 100%;
+  height: 350px;
+  margin-bottom: 30px;
+  border-radius: 8px;
+  overflow: hidden;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; 
+  z-index: 1;  
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+  z-index: 2;   
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.hero-content h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+.hero-content p {
+  font-size: 1.1rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.animate-fade-in {
+  animation-name: heroFadeInUp;
+  animation-duration: 0.8s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both; 
+}
+
+h1.hero-title.animate-fade-in {
+  animation-delay: 0.2s;
+}
+
+p.hero-subtitle.animate-fade-in {
+  opacity: 0;
+  animation-delay: 1.0s;
+}
+
+.logo {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px;
+  margin-right: auto;
+}
+
+.todo-form {
+  display: flex;
+}
+
+.todo-form input{
+  flex: 9;
+}
+
+.todo-form button{
+  flex: 1;
+  min-width: 95px;
+}
+
+#todo-list {
+  list-style: none;
+  background-color: var(--card-bg-color);
+  border: 2px dashed var(--point-green);
+  border-radius: 8px;
+  min-height: 200px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px 20px;
+}
+
+.btn {
+  width: 100px;
+  height: 45px;
+  color: var(--text-white);
+  border: none;
+  border-radius: 8px;
+  margin: auto;
+}
+
+.green {
+  background-color: var(--point-green);
+
+}
+
+.red {
+  background-color: var(--primary-tomato);
+
+}
+.pink {
+  background-color: var(--light-tomato);
+}
+
+.gray {
+  background-color: var(--text-gray);
+}
+
+.btn:hover {
+  background-color: var(--text-main);
+}
+
+.completed {
+  text-decoration: line-through; /* 👈 취소선 그어주기 */
+  color: var(--text-gray);   /* 글자색을 흐리게 변경 */
+}
+
+/* 2. 사용자가 화면에서 체크박스를 누르는 순간 즉시 실시간 반영 (UX 향상) */
+.todo-item input[type="checkbox"]:checked + span {
+  text-decoration: line-through;
+  color: var(--text-gray);
+}
+
+.result-bottom {
+  display: flex;
+  margin-top: auto;
+}
+
+.btn-set {
+  margin-left: auto;
+}
+
+@media (max-width: 900px) {
+  body {
+    margin-top: 120px;
+  }
+  nav {
+    margin-top: 30px;
+  }
+  header ul {
     flex-direction: column;
     gap: 10px;
   }
   #aside-left {
     position: static;
-    margin-top: 120px;
-  }
-  .signup-result-top {
-    margin-top: 140px;
   }
   .content-wrapper {
     flex-direction: column;
@@ -381,7 +723,58 @@ header h1 {
   .trip-card-grid-wrapper {
     grid-template-columns: 1fr;
   }
-  .topic {
-    scroll-margin-top: 300px;
+  .topic, input {
+    scroll-margin-top: 200px;
   }
+  .card-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px 20px;
+    margin-bottom: 40px;
+  }
+
+  #trip-food-section {
+    flex: 72;                   
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .dark-mode-btn{
+    margin: 15px 20px 20px auto;
+  }
+}
+
+@media (max-width: 600px) {
+  .card-grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 24px 20px;
+    margin-bottom: 40px;
+  }
+
+  #header {
+    display: none;
+  }
+
+  #aside-left, #aside-right {
+    display: none;
+  }
+}
+
+@keyframes heroFadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  h1.hero-title.animate-fade-in,
+  p.hero-subtitle.animate-fade-in {
+    opacity: 1 !important;
+    transform: none !important;     
+    animation: none !important; 
+    transition: none !important;  
+  }
+
 }

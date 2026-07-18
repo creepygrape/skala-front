@@ -7,8 +7,9 @@
     <link rel="stylesheet" href="../css/style.css" />
   </head>
   <body>
-    <header></header>
-    <nav></nav>
+    <header>
+      <nav></nav>
+    </header>
     <div class="container">
     <div class="content-wrapper">
       <aside id="aside-left">
@@ -17,7 +18,7 @@
       </aside>
       <main>
       <h2>정보 입력</h2>
-      <div id="div3">
+      <div>
         <form action="signUpResult.html" method="get">
           <fieldset>
             <legend>계정 정보</legend>
@@ -31,10 +32,10 @@
               name="userId"
               minlength="4"
               maxlength="20"
-              pattern="^[a-zA-Z0-9]{4,20}$"
-              title="아이디는 최소 4자 이상이여야 하며, 영문 대소문자와 숫자만 입력 가능합니다."
+              pattern="^[a-zA-Z0-9]{4,12}$"
+              title="아이디는 영어 대/소문자와 숫자를 포함하여 최소 4자, 최대 12자 입력 가능합니다."
               required
-              placeholder="4 ~ 20자 영문/숫자"
+              placeholder="4 ~ 12자 영문/숫자"
             /><br />
             <label for="userPassword" id="userPassword-label" class="topic" data-title="비밀번호">*비밀번호 :</label>
             <input
@@ -43,8 +44,8 @@
               name="userPassword"
               minlength="4"
               maxlength="20"
-              pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{4,20}$"
-              title="비밀번호는 최소 4자 이상이어야 하며, 영문 대소문자, 숫자를 포함해야 합니다."
+              pattern="^[a-zA-Z0-9]{8,20}$"
+              title="비밀번호는 영어 대/소문자와 숫자를 포함하여 최소 8자, 최대 20자 입력 가능합니다."
               required
               placeholder="4 ~ 20자 영문/숫자"
             /><br />
@@ -67,6 +68,7 @@
               minlength="2"
               maxlength="10"
               title="이름은 최소 2자, 최대 10자까지 입력할 수 있습니다."
+              required
             /><br />
             <label for="userPhone" id="userPhone-label" class="topic" data-title="전화번호">전화번호 :</label>
             <input
@@ -93,23 +95,27 @@
                 선택안함</label
               ><br />
             </p>
-            <p id="favoriteFruits" class="topic" data-title="좋아하는 과일">
-              좋아하는 과일 (중복 선택 가능): <br />
+            <p id="interest" class="topic" data-title="관심 분야">
+              관심 분야 (중복 선택 가능): <br />
               <label
-                ><input type="checkbox" name="favoriteFruits" value="apple" />
-                사과</label
+                ><input type="checkbox" name="interest" value="html" />
+                HTML</label
               ><br />
               <label
-                ><input type="checkbox" name="favoriteFruits" value="banana" />
-                바나나</label
+                ><input type="checkbox" name="interest" value="css" />
+                CSS</label
               ><br />
               <label
-                ><input type="checkbox" name="favoriteFruits" value="orange" />
-                오렌지</label
+                ><input type="checkbox" name="interest" value="frontend" />
+                프론트엔드</label
               ><br />
               <label
-                ><input type="checkbox" name="favoriteFruits" value="grape" />
-                포도</label
+                ><input type="checkbox" name="interest" value="backend" />
+                백엔드</label
+              ><br />
+              <label
+                ><input type="checkbox" name="interest" value="design" />
+                디자인</label
               >
             </p>
             <label for="userCountry" id="userCountry-label" class="topic" data-title="거주 국가">거주 국가 :</label>
@@ -133,6 +139,18 @@
             ></textarea
             ><br /><br />
           </fieldset>
+          <fieldset>
+            <legend>약관동의</legend>
+            <p id="agreement" class="topic" data-title="약관동의" required>
+              <label
+                ><input type="radio" name="agreement" value="agree" required/>동의</label
+              >
+              <label
+                ><input type="radio" name="agreement" value="disagree" />
+                비동의</label
+              >
+            </p>
+          </fieldset>
           <input type="submit" class="btn-submit" value="동의하고 회원가입" />
           <input type="reset" class="btn-reset" value="다시 작성" />
         </form>
@@ -142,6 +160,6 @@
     </div>
     <footer></footer>
     <script src="../script/include.js"></script>
-    <script src="../script/topicList.js"></script>
+    <script src="../script/signUpValidation.js"></script>
   </body>
 </html>
