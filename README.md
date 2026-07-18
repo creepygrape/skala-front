@@ -71,7 +71,7 @@
 > 새 탭 열기(target=\_blank) 동작 확인
 
 <p align="left">
-  <img src="exec/img/0004.jpg" width="700px" alt="My Profile">
+  <img src="exec/img/0004.jpg" width="700px" alt="Anchor">
 </p>
 <br>
 
@@ -80,7 +80,7 @@
 > 다양한 `input` 타입을 사용하여 회원가입 폼 구성
 
 <p align="left">
-  <img src="exec/img/0005.jpg" width="700px" alt="My Profile">
+  <img src="exec/img/0005.jpg" width="700px" alt="SignUp">
 </p>
 <br>
 
@@ -89,7 +89,7 @@
 > 이미지 삽입 + 섹션/아티클 생성
 
 <p align="left">
-  <img src="exec/img/0007.jpg" width="700px" alt="My Profile">
+  <img src="exec/img/0007.jpg" width="700px" alt="TripHub">
 </p>
 <br>
 
@@ -98,8 +98,8 @@
 > 다양한 CSS 수정 + 반응형 확인
 
 <p align="left">
-  <img src="exec/img/0008.jpg" width="700px" alt="My Profile">
-  <img src="exec/img/0009.jpg" width="700px" alt="My Profile">
+  <img src="exec/img/0008.jpg" width="700px" alt="CSS1">
+  <img src="exec/img/0009.jpg" width="700px" alt="CSS2">
 </p>
 <br>
 
@@ -110,7 +110,7 @@
 > JS 문법 + DOM/Event로 페이지별 목차 자동 생성
 
 <p align="left">
-  <img src="exec/img/0010.jpg" width="700px" alt="My Profile">
+  <img src="exec/img/0010.jpg" width="700px" alt="JS+DOM/Event">
 </p>
 
 <br>
@@ -118,31 +118,95 @@
 ### 9. Async/Module
 
 > 비동기 통신(`fetch`, `async/await`)을 활용해 컴포넌트화된 HTML 및 외부 데이터를 모듈식으로 동적 로드합니다.
-
+<p align="left">
+  <img src="exec/img/0011.jpg" width="700px" alt="Async/Module">
+</p>
 <br>
 
 ### 10. Wrap-up Quiz
 
-> Day 2까지 학습한 내용의 이해도를 평가하기 위한 퀴즈 실습입니다.
-
+> 클릭형 퀴즈(숫자 맞추기)
+<p align="left">
+  <img src="exec/img/0012.jpg" width="700px" alt="Quiz1">
+  <img src="exec/img/0013.jpg" width="700px" alt="Quiz2">
+  <img src="exec/img/0014.jpg" width="700px" alt="Quiz3">
+</p>
 <br>
+
+---
+
+## 종합 실습
 
 ### 11. 회원가입 & 결과 페이지
 
-> 회원가입 폼 제출 시, 입력한 데이터를 안전하게 다음 결과 화면으로 연동하고 표현하는 종합 실습입니다.
+> 회원가입 폼(다양한 input·유효성 검증)을 만들고, 제출 시 입력값을 표로 보여주는 결과 페이지로 이동하는 과제
+<p align="left">
+  <img src="exec/img/0015.jpg" width="700px" alt="SignUp1">required 적용 여부(예시: 아이디)
+  <img src="exec/img/0016.jpg" width="700px" alt="SignUp2">pattern 적용 여부(예시: 아이디)
+  <img src="exec/img/0018.jpg" width="700px" alt="SignUp3">checkbox required 적용 여부(예시: 약관동의)
+  <br>
+  <img src="exec/img/0019.jpg" width="700px" alt="SignUpResult">회원가입 결과 페이지
+</p>
 
+필수 요구사항
+- [x] 필수 항목(이름·아이디·비밀번호·이메일·약관동의)에 required 적용
+- [x] 아이디는 pattern 으로 영문/숫자 4~12자만 허용
+- [x] 비밀번호 minlength=8, 전화번호 010-0000-0000 패턴
+
+세부 요구사항
+- [x] 성별 radio(단일), 관심분야 checkbox(복수), 지역 select 사용
+- [x] 상단 헤더를 position: fixed + z-index 로 고정
+- [x] 제출 시 result.html 로 이동해 입력값을 table 로 표시(복수값 포함)
 <br>
 
 ### 12. 여행지 소개 페이지
 
-> 3열 카드 반응형 그리드 레이아웃, 오버플로우 방지 텍스트 가두기 및 스티키 사이드바 등 고도화된 스타일링 기술이 가미된 종합 여행 웹페이지입니다.
+> 시맨틱 구조의 여행지 소개 페이지를 만든다. 고정 내비게이션의 바로가기(앵커), 이미지 갤러리, 영상, 팁(aside)을 배치
 
+<p align="left">
+  <img src="exec/img/0026.jpg" width="700px" alt="TripHub1">부드럽게 스크롤 내리기 설정
+  <img src="exec/img/0021.jpg" width="700px" alt="TripHub2">전체 구조를 시맨틱 요소로 구성
+  <img src="exec/img/0022.jpg" width="700px" alt="TripHub3">3열 카드 그리드 레이아웃
+  <img src="exec/img/0023.jpg" width="700px" alt="TripHub4">본문 article + 팁 aside 2단 배치
+  <br>
+  <img src="exec/img/0024.jpg" width="700px" alt="TripHub5">video에 controls, poster 적용
+  <img src="exec/img/0025.jpg" width="700px" alt="TripHub6">이미지, 카드 hover 시 scale 확대
+  <img src="exec/img/0027.jpg" width="700px" alt="TripHub6">footer에 '맨 위로 가기' 버튼
+  <img src="exec/img/0028.jpg" width="700px" alt="TripHub6"> img에 alt 설정
+</p>
+
+필수 요구사항
+- [x]전체 구조를 header/nav/main/section/article/aside/footer 시맨틱 요소로 구성 
+- [x] 내비게이션을 position: fixed 로 고정하고 링크를 섹션 id 로 연결 
+세부 요구사항
+- [x] 명소 갤러리를 figure + figcaption 3개 이상으로 구성
+- [x] 먹거리 섹션은 본문 article + 팁 aside 2단 배치
+추가 요구사항
+- [x] video 요소에 controls·poster 적용
+- [x] 히어로 배경은 gradient 오버레이 + 이미지, 카드 hover 시 scale 확대
 <br>
 
 ### 13. 반응형 상품 카드 갤러리
 
-> 미디어 쿼리를 기반으로 데스크톱, 태블릿, 모바일 등 기기 해상도에 최적화하여 조절되는 모던 반응형 카드 갤러리입니다.
+> 상품 카드 갤러리를 CSS Grid로 배치하고, 화면 폭에 따라 3열→2열→1열로 바뀌는 반응형과 다크모드·hover/등장 애니메이션을 구현
+<p align="left">
+  <img src="exec/img/0038.jpg" width="700px" alt="TripHub1">5개 이상의 색상 변수 정의
+  <img src="exec/img/0022.jpg" width="700px" alt="TripHub2">display:grid + repeat(3, 1fr)로 3열 배치 
+  <img src="exec/img/0022.jpg" width="700px" alt="TripHub3">Flexbox(space-between, margin-left:auto)
+  <img src="exec/img/0023.jpg" width="700px" alt="TripHub4">본문 article + 팁 aside 2단 배치
+  <br>
+  <img src="exec/img/0024.jpg" width="700px" alt="TripHub5">video에 controls, poster 적용
+  <img src="exec/img/0025.jpg" width="700px" alt="TripHub6">이미지, 카드 hover 시 scale 확대
+</p>
 
+필수 요구사항
+- [x]:root에 5개 이상 색상 변수 정의 후 전 구간 var() 사용 ☐
+- [x]상품 카드를 display:grid + repeat(3, 1fr)로 3열 배치(카드 6개 이상) ☐
+- [x]상단바·카드 정렬에 Flexbox(space-between, margin-left:auto) 사용 ☐
+세부 요구사항
+- [x]@media로 900px 이하 2열, 600px 이하 1열 + 메뉴 숨김 ☐
+- [x]카드 hover 시 transform: translateY() + 그림자 강화(transition 포함) ☐
+- [x]히어로 문구에 @keyframes 등장 애니메이션, 다크모드 버튼으로 테마 전환 ☐
 <br>
 
 ### 14. 인터랙티브 할 일 관리 앱
