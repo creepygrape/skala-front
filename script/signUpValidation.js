@@ -1,6 +1,3 @@
-// ../script/validation.js
-
-// 1. 문서 전체(document)에서 발생하는 submit 이벤트를 미리 감시합니다.
 document.addEventListener("submit", (event) => {
   const form = event.target;
 
