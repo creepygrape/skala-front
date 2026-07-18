@@ -192,23 +192,40 @@
 <p align="left">
   <img src="exec/img/0038.jpg" width="700px" alt="TripHub1">5개 이상의 색상 변수 정의
   <img src="exec/img/0022.jpg" width="700px" alt="TripHub2">display:grid + repeat(3, 1fr)로 3열 배치 
-  <img src="exec/img/0022.jpg" width="700px" alt="TripHub3">Flexbox(space-between, margin-left:auto)
-  <img src="exec/img/0023.jpg" width="700px" alt="TripHub4">본문 article + 팁 aside 2단 배치
-  <br>
-  <img src="exec/img/0024.jpg" width="700px" alt="TripHub5">video에 controls, poster 적용
-  <img src="exec/img/0025.jpg" width="700px" alt="TripHub6">이미지, 카드 hover 시 scale 확대
+  <img src="exec/img/0067.jpg" width="700px" alt="TripHub3">Flexbox(space-between, margin-left:auto)
+  <img src="exec/img/0030.jpg" width="700px" alt="TripHub4">media로 반응형 페이지 구현 - 1200
+  <img src="exec/img/0033.jpg" width="700px" alt="TripHub4">media로 반응형 페이지 구현 - 800
+  <img src="exec/img/0031.jpg" width="700px" alt="TripHub5">media로 반응형 페이지 구현 - 800_2
+  <img src="exec/img/0032.jpg" width="700px" alt="TripHub6">media로 반응형 페이지 구현 - 500
+  <img src="exec/img/0034.jpg" width="700px" alt="TripHub6">다크모드
+  <img src="exec/img/0035.jpg" width="700px" alt="TripHub6">카드 hover
 </p>
 
 필수 요구사항
-- [x]:root에 5개 이상 색상 변수 정의 후 전 구간 var() 사용 ☐
-- [x]상품 카드를 display:grid + repeat(3, 1fr)로 3열 배치(카드 6개 이상) ☐
-- [x]상단바·카드 정렬에 Flexbox(space-between, margin-left:auto) 사용 ☐
+- [x]:root에 5개 이상 색상 변수 정의 후 전 구간 var() 사용
+- [x]상품 카드를 display:grid + repeat(3, 1fr)로 3열 배치(카드 6개 이상)
+- [x]상단바·카드 정렬에 Flexbox(space-between, margin-left:auto) 사용
 세부 요구사항
-- [x]@media로 900px 이하 2열, 600px 이하 1열 + 메뉴 숨김 ☐
-- [x]카드 hover 시 transform: translateY() + 그림자 강화(transition 포함) ☐
-- [x]히어로 문구에 @keyframes 등장 애니메이션, 다크모드 버튼으로 테마 전환 ☐
+- [x]@media로 900px 이하 2열, 600px 이하 1열 + 메뉴 숨김
+- [x]카드 hover 시 transform: translateY() + 그림자 강화(transition 포함)
+- [x]히어로 문구에 @keyframes 등장 애니메이션, 다크모드 버튼으로 테마 전환
 <br>
 
 ### 14. 인터랙티브 할 일 관리 앱
 
-> 순수 JavaScript DOM API를 사용하여 추가, 삭제, 상태 변경이 일어나는 동적이고 인터랙티브한 To-Do 리스트 애플리케이션입니다.
+> 할 일을 추가·완료·삭제·필터링하는 앱을 만든다. 데이터는 객체 배열로 관리하고 localStorage에 저장, 로직을 모듈로 분리하며 오늘의 한마디를 비동기로 불러온다. (난이도 중상)
+
+<p align="left">
+  <img src="exec/img/0036.jpg" width="700px" alt="TripHub1">오늘의 한마디 + 할 일 목록 + 상태 반영
+  <img src="exec/img/0037.jpg" width="700px" alt="TripHub2">로컬 스토리지 연동
+</p>
+
+필수 요구사항
+- [x]추가 버튼 또는 Enter 키로 할 일 추가(빈 값 방지)
+- [x]체크박스로 완료 토글(취소선), ✕ 버튼으로 삭제
+세부 요구사항
+- [x]전체 / 진행중 / 완료 필터와 하단 요약(전체·완료 개수)
+- [x]이벤트 위임(부모 ul에 리스너 1회)으로 동적 항목 처리
+추가 요구사항
+- [x]storage.js(데이터) / app.js(화면)로 모듈 분리, type=module 사용
+- [x]localStorage로 저장·복원, 오늘의 한마디는 fetch로 로드(실패 시 기본 문구)
